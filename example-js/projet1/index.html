@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .container{
+            border: 2px solid black;
+            flex-grow: 1;
+            position: relative;
+
+        }
+
+        .carre{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="haut">Haut</button>
+        <button id="bas"> Bas</button>
+    </div>
+
+    <div id="container" class="container">
+        <div id="carre" class="carre">
+
+        </div>
+    </div>
+
+
+<script>
+ var haut = document.getElementById("haut")
+ var bas = document.getElementById("bas")
+ var carre = document.getElementById("carre")
+ 
+
+ bas.addEventListener("click", function(){
+    var carreTop = carre.style.top;
+    var x = 0
+    if(
+        carreTop===""
+    ){
+      carre.style.top= "50px"  
+    } else{
+        carreTop.replace("px", "")
+        var carreTopNumber= Number(carreTop)
+        var newCarreTop = carreTopNumber + 20
+        carre.style.top= newCarreTop + "px"
+    }
+    
+ })
+
+ haut.addEventListener("click", function(){
+     alert("coucou")
+ })
+
+
+</script>
+</body>
+</html>
