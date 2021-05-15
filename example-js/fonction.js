@@ -1,20 +1,25 @@
-function coucou(param1) {
-  return 'coucou' + param1;
+function direBonjour() {
+  console.log('Bonjour, Eugenie');
+  return 'coucou';
 }
-const myFunction = function () {
-  // console.log('COUCOU');
-  return coucou('hello');
+
+var direBonjour2 = function () {
+  console.log('Bonjour, Eugenie2');
 };
 
-const nb1 = 4;
-const nb2 = 7;
+// console.log('++1', typeof direBonjour);
+// console.log('++2', typeof direBonjour());
 
-// const result = myFunction();
-// console.log('resultat = ', result);
+function arrondirChiffre(chiffre) {
+  return Math.round(chiffre);
+}
 
-// console.log('++1', nb1);
-// console.log('++2', typeof nb1);
-// console.log('++3', myFunction);
-// console.log('++4', typeof myFunction);
-console.log('++5', myFunction());
-// console.log('++6', typeof myFunction());
+function addition(nb1, nb2) {
+  return nb1 + nb2;
+}
+
+console.log('--1', 3.33);
+console.log('--2', arrondirChiffre(3.33));
+
+console.log('**1', addition(4.44, 7.77));
+console.log('**2', addition(arrondirChiffre(4.44), arrondirChiffre(7.77)));

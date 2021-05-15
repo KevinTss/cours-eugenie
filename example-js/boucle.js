@@ -8,6 +8,6 @@ while (nb <= 100) {
 }
 
 // Boucle for
-for (let i = 1; i <= 100; i++) {
-  console.log(i);
+for (let nb = 1; nb <= 100; nb++) {
+  console.log(nb);
 }
